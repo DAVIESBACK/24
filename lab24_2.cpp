@@ -23,8 +23,38 @@ int main(){
 	loc = find(line_up.begin(),line_up.end(),"Bob");
 	line_up.insert(loc,"Oscar");
 	
-	//Write your code here
 	
+	line_up.push_back("Luffy");
+	line_up.push_back("Sanji");
+	line_up.push_back("Nami");
+	
+	
+	line_up.pop_front();
+	line_up.pop_front();
+	
+	
+	loc = find(line_up.begin(), line_up.end(), "Luffy");
+	loc++; // Move iterator to the position after Luffy
+	line_up.insert(loc, "Narutu");
+	
+
+	line_up.push_front("Prayath");
+	
+	
+	loc = line_up.begin();
+	loc++; 
+	line_up.insert(loc, "Tony");
+	
+
+	loc = find(line_up.begin(), line_up.end(), "Bob");
+	if(loc != line_up.end()) line_up.erase(loc);
+	
+
+	line_up.pop_front();
+	line_up.pop_front();
+	line_up.pop_front();
+	
+
 	printList(line_up);
 		
 	return 0;
